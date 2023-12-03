@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <RootNamespace>Extensions.Marks</RootNamespace>
+    <Authors>Serhii Kuzmychov</Authors>
+    <Company />
+    <RepositoryUrl>https://github.com/ku3mich/Extensions.Marks/</RepositoryUrl>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+</Project>

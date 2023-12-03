@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageProps>$([MSBuild]::GetPathOfFileAbove(package.props))</PackageProps>
+  </PropertyGroup>
+  <Import Project="$(PackageProps)" Condition="exists('$(PackageProps)')" />
+
+  <PropertyGroup>
+    <PackageDescription>Extensions.Marks.DependencyInjection</PackageDescription>
+    <Version>0.0.1</Version>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

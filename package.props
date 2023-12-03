@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <CommonProps>$([MSBuild]::GetPathOfFileAbove(common.props))</CommonProps>
+  </PropertyGroup>
+  <Import Project="$(CommonProps)" Condition="exists('$(CommonProps)')" />
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>
