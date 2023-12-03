@@ -17,11 +17,11 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v4
         with: 
-          fetch-depth: 0
+            fetch-depth: 0
       - name: Setting up dotnet 8 as default SDK
         run: |
-          dotnet new globaljson --sdk-version 8.0.0 --roll-forward minor
-          dotnet --version
+            dotnet new globaljson --sdk-version 8.0.0 --roll-forward minor
+            dotnet --version
       - name: Build
         run: dotnet build -c Release
       - name: Test
@@ -33,6 +33,6 @@ jobs:
             NUGET_FEED: https://api.nuget.org/v3/index.json
             NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
-	  echo "$NUGET_FEED:$NUGET_KEY"
-	  dotnet nuget push --skip-duplicate -s $NUGET_FEED -k $NUGET_KEY bin/**/*.nupkg
+            echo "$NUGET_FEED:$NUGET_KEY"
+            dotnet nuget push --skip-duplicate -s $NUGET_FEED -k $NUGET_KEY bin/**/*.nupkg
         
