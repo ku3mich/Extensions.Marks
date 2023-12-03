@@ -31,7 +31,7 @@ jobs:
       - name: Publish nugets
         env:
             NUGET_FEED: https://api.nuget.org/v3/index.json
-            NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+            NUGET_KEY: ${{ secrets.NUGET_KEY }}
         run: |
             echo "$NUGET_FEED:$NUGET_KEY"
             dotnet nuget push --skip-duplicate -s $NUGET_FEED -k $NUGET_KEY bin/**/*.nupkg
